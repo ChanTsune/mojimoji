@@ -12,6 +12,7 @@ jobs:
           - 3.7
           - 3.8
           - 3.9
+          - 3.10
     container: 
       image: quay.io/pypa/manylinux2014_x86_64
       env:
@@ -47,7 +48,7 @@ jobs:
     name: "build (${{ matrix.pyver }}, aarch64)"
     strategy:
       matrix:
-        pyver: [cp37-cp37m, cp38-cp38, cp39-cp39]
+        pyver: [cp37-cp37m, cp38-cp38, cp39-cp39, cp310-cp310]
       fail-fast: false
     runs-on: ubuntu-latest
     env:
